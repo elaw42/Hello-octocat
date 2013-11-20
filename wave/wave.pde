@@ -4,6 +4,7 @@ int d = 20;
 
 void setup() {
   size(600, 200);
+  colorMode(HSB, width, 100, 100, 100);
   theta = 0;
   angVel = .1;
   noStroke();
@@ -15,6 +16,7 @@ void draw() {
   background(0);
   float ang = theta;
   for (int x = 0; x <= width; x+=xspace) {
+    fill(x, 100, 100, 30);
     float y = map(sin(ang), -1, 1, height/2 - amp/2, height/2 + amp/2);
     ellipse(x, y, d, d);
     ang+=angVel;
